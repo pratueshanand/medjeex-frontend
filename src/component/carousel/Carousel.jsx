@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goToNext();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
   const goToPrevious = () => {
     if (isTransitioning) return;
@@ -12,7 +20,7 @@ const Carousel = ({ images }) => {
         prevIndex === 0 ? images.length - 1 : prevIndex - 1
       );
       setIsTransitioning(false);
-    }, 500); // Adjust timing to match transition
+    }, 500);
   };
 
   const goToNext = () => {
@@ -27,7 +35,7 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full mt-2">
       <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
         <img
           src={images[currentIndex]}

@@ -2,7 +2,8 @@ import React from 'react'
 import Carousel from '../../component/carousel/Carousel'
 import Card from '../../component/card/Card';
 import myimage from '../../asset/images/carousel_image1.jpg'; 
-import Navbar from '../../component/navbar/Navbar'
+import Navbar from '../../component/navbar/Navbar';
+import GetStarted from "../../component/getStarted/GetStarted";
 
 const Home = () => {
 
@@ -17,13 +18,9 @@ const Home = () => {
     <>
     <Navbar/>
     <Carousel images={imagesSet1}/>
-    <div className="flex items-center justify-centerflex justify-between items-center h-64 w-full">
-        <Card/>
-        <Card/>
-        <Card/>
-    </div>
+    <GetStarted/>
     </>
   )
 }
 
-export default Home
+export default Home;
