@@ -4,7 +4,7 @@ import Card from '../../component/card/Card';
 import myimage from '../../asset/images/carousel_image1.jpg'; 
 import Navbar from '../../component/navbar/Navbar'
 
-const home = () => {
+const Home = () => {
 
     const imagesSet1 = [
         myimage,
@@ -26,4 +26,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Home

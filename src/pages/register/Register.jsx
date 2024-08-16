@@ -5,13 +5,13 @@ import Signup from './signup/Signup';
 import Login from './logins/Login';
 import ResetPassword from './reset/ResetPassword';
 import ForgotPassword from './forgot/Forgotpassword';
-// Import your logo
+
 import Medjeex_Logo from '../../asset/images/Medjeex_Logo.png';
 
 const Register = () => {
   return (
     <div className="register-container">
-      {/* Add the logo at the top */}
+     
       <div className="logo-container">
         <img src={Medjeex_Logo} alt="Logo" className="logo" />
       </div>
