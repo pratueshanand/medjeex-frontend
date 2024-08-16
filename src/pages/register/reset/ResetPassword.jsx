@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import Medjeex_Logo from '../../../asset/images/Designer.jpeg';
 
 const ResetPassword = () => {
   const [password, setPassword] = useState("");
@@ -28,6 +29,9 @@ const ResetPassword = () => {
 
   return (
     <div className="sign-up-container">
+    <div className="logo-container">
+        <img src={Medjeex_Logo} alt="Logo" className="logo" />
+      </div>
       <form className="sign-up-form" onSubmit={handleSubmit}>
         <h2>Reset Password</h2>
         <label htmlFor="password">New Password:</label>

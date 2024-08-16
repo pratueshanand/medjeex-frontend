@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-
+import "./Signup.css";
 import Axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import Designer from '../../../asset/images/Designer.jpeg';
+import Medjeex_Logo from '../../../asset/images/Medjeex_Logo.png' // Ensure the path is correct
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -26,8 +28,15 @@ const Signup = () => {
         console.log(err);
       });
   };
+
   return (
     <div className="sign-up-container">
+      <div className="logo-container">
+        <img src={Designer} alt="Logo" className="logo" />
+      </div>
+      <div>
+        <img src={Medjeex_Logo} alt="medjeexlogo"/>
+      </div>
       <form className="sign-up-form" onSubmit={handleSubmit}>
         <h2>Sign Up</h2>
         <label htmlFor="username">Username:</label>

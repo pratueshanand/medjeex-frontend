@@ -4,11 +4,14 @@ import whyimage from "../../asset/whylightimg.webp";
 
 const WhyMedJeex = () => {
   return (
-    <div className="whymedjee_container">
-      <div className="whymedjee_main">
-      <div className="mission_heading">
-        <h2>MISSION MEDJEEX</h2>
+    <>
+  <div className="mission_heading">
+        <h2>WHY MEDJEEX</h2>
       </div>
+    <div className="whymedjee_container">
+    
+      <div className="whymedjee_main">
+        
         <img src={whyimage} alt="Why MedJeex" />
       </div>
       <div className="whymedjee_cards">
@@ -50,6 +53,7 @@ const WhyMedJeex = () => {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
