@@ -3,8 +3,9 @@
   justify-content: space-between;
   align-items: flex-start;
   width:80%;
-margin:30px auto;
-gap:40px;
+  margin-top: auto;
+  margin:30px auto;
+  gap:40px;
 
 }
 
