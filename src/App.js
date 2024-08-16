@@ -1,10 +1,11 @@
 
 import './App.css';
+import Home from './pages/home/Home';
 
 function App() {
   return (
     <div className="App">
-     Hii saar welcome to production level
+      <Home/>
     </div>
   );
 }
