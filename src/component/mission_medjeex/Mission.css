@@ -1,0 +1,60 @@
+.mission_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.mission_heading h2 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mission_card {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.mission_section,
+.mission_section2,
+.mission_section3 {
+  border: 4px solid #d0d0d0; /* Prominent outer box border */
+  border-radius: 10px; /* Rounded corners for the outer box */
+height:400px;
+  background-color: #ffffff; /* Box background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for the outer box */
+  flex: 1; /* Make each section take up equal space */
+  margin: 10px; /* Space between each section */
+}
+.mission_section2{
+  position:relative;
+  top:70px;
+}
+
+.mission_section h3,
+.mission_section2 h3,
+.mission_section3 h3 {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:20px;
+  margin-left:5px;
+  width:140px;
+  height:40px;
+  border-radius: 25px; /* Slightly smaller rounded corners */
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  background-color: #f5f5f5; /* Light background color for button */
+}
+
+.mission_section h3:hover,
+.mission_section2 h3:hover,
+.mission_section3 h3:hover {
+  background-color: #e0e0e0; /* Change background on hover */
+  border-color: #a0a0a0; /* Slightly adjusted border color on hover */
+}
