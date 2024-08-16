@@ -6,6 +6,9 @@ const WhyMedJeex = () => {
   return (
     <div className="whymedjee_container">
       <div className="whymedjee_main">
+      <div className="mission_heading">
+        <h2>MISSION MEDJEEX</h2>
+      </div>
         <img src={whyimage} alt="Why MedJeex" />
       </div>
       <div className="whymedjee_cards">

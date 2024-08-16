@@ -1,9 +1,11 @@
 import React from 'react'
 import Carousel from '../../component/carousel/Carousel'
-import Card from '../../component/card/Card';
 import myimage from '../../asset/images/carousel_image1.jpg'; 
 import Navbar from '../../component/navbar/Navbar';
 import GetStarted from "../../component/getStarted/GetStarted";
+import Mission from "../../component/mission_medjeex/Mission"
+import WhyMedJeex from '../../component/whymedjeex/WhyMedJeex';
+import Footer from "../../component/footer/Footer"
 
 const Home = () => {
 
@@ -19,8 +21,10 @@ const Home = () => {
     <Navbar/>
     <Carousel images={imagesSet1}/>
     <GetStarted/>
+    <Mission/>
+    <WhyMedJeex/>
+    <Footer/>
     </>
   )
 }
-
 export default Home;
