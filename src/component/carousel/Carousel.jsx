@@ -35,8 +35,8 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="relative w-full mt-2">
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+    <div className="relative w-full">
+      <div className="relative h-56 overflow-hidden md:h-96">
         <img
           src={images[currentIndex]}
           className={`absolute block w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
