@@ -31,67 +31,64 @@ const Carousel = ({ images }) => {
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
       setIsTransitioning(false);
-    }, 500); // Adjust timing to match transition
+    }, 500);
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full bg-gray-200">
       <div className="relative h-56 overflow-hidden md:h-96">
-        <img
-          src={images[currentIndex]}
-          className={`absolute block w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-            isTransitioning ? 'opacity-0' : 'opacity-100'
-          }`}
-          alt="Carousel"
-        />
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            className={`absolute block w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              index === currentIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+            alt={`Slide ${index}`}
+          />
+        ))}
       </div>
 
       {/* Previous Button */}
       <button
         onClick={goToPrevious}
-        className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 bg-gray-800 bg-opacity-50 text-white rounded-full hover:bg-opacity-75 focus:outline-none"
       >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
-          <svg
-            className="w-4 h-4 text-white"
-            fill="none"
-            viewBox="0 0 6 10"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 1L1 5l4 4"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-            />
-          </svg>
-          <span className="sr-only">Previous</span>
-        </span>
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          viewBox="0 0 6 10"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5 1L1 5l4 4"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+          />
+        </svg>
       </button>
 
       {/* Next Button */}
       <button
         onClick={goToNext}
-        className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 bg-gray-800 bg-opacity-50 text-white rounded-full hover:bg-opacity-75 focus:outline-none"
       >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
-          <svg
-            className="w-4 h-4 text-white"
-            fill="none"
-            viewBox="0 0 6 10"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 9l4-4-4-4"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-            />
-          </svg>
-          <span className="sr-only">Next</span>
-        </span>
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          viewBox="0 0 6 10"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 9l4-4-4-4"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+          />
+        </svg>
       </button>
     </div>
   );

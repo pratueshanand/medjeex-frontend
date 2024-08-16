@@ -11,13 +11,12 @@ import ForgotPassword from './pages/register/forgot/Forgotpassword.jsx';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/courses" element={<Course />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/forgotPassword" element={<ForgotPassword />} />
-      <Route path="/resetPassword/:token" element={<ResetPassword />} />
-      
+      <Route path="/" element={<Home/>} />
+      <Route path="/courses" element={<Course/>} />
+      <Route path="/signup" element={<Signup/>} />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/forgotPassword" element={<ForgotPassword/>} />
+      <Route path="/resetPassword/:token" element={<ResetPassword/>} />
     </Routes>
   );
 }
